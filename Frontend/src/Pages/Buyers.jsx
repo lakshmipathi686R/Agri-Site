@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Layout from '../Components/Layout' 
 const Buyers = () => {
   return (
-    <div>
-      Buyers
-    </div>
+    <Layout>
+    <h1>Buyers</h1>
+  </Layout>
   )
 }
 //dont change the name of function while building
