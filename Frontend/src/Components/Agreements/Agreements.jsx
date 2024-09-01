@@ -26,16 +26,16 @@ const Agreements = ({ userId, role }) => {
 
   const handleDownloadBond = (agreement) => {
     // Use the BondTemplate component to generate and download the bond
-    // const bondData = {
-    //   farmer: agreement.farmerName, // Adjust type as needed
-    //   buyer: agreement.buyerName, // Adjust type as needed
-    //   propertyType: agreement.productType,
-    //   minPrice: agreement.minPrice,
-    //   date: new Date(agreement.dateAgreed).toLocaleDateString(),
-    //   address: userId.addresss,
-    // };
+    const bondData = {
+      farmer: agreement.farmerName, // Adjust type as needed
+      buyer: agreement.buyerName, // Adjust type as needed
+      propertyType: agreement.productType,
+      minPrice: agreement.minPrice,
+      date: new Date(agreement.dateAgreed).toLocaleDateString(),
+      address: userId.addresss,
+    };
     console.log(bondData);
-    BondTemplate(farmer=agreement.farmerName, buyer=agreement.buyerName, propertyType=agreement.productType, minPrice=agreement.minPrice, date=new Date(agreement.dateAgreed).toLocaleDateString(), address=userId.address); // Call the BondTemplate function with the bond data
+    BondTemplate(bondData);
      window.location.href = "/bondgenerate";
   };
 
